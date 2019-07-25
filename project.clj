@@ -148,6 +148,13 @@
   :uberjar-name
   "metabase.jar"
 
+  :heroku {
+    :app-name "analytics-maderenovations"
+    :jdk-version "1.8"
+    :include-files ["target/uberjar/metabase.jar"]
+    :process-types { "web" "MB_JETTY_PORT=\"$PORT\" java -Dserver.port=$PORT -jar target/uberjar/metabase.jar" }
+  }
+
   :profiles
   {:dev
    {:dependencies
@@ -156,7 +163,8 @@
      [ring/ring-mock "0.3.2"]]
 
     :plugins
-    [[lein-environ "1.1.0"]]                                          ; easy access to environment variables
+    [[lein-environ "1.1.0"]
+     [lein-heroku "0.5.3"]]                                          ; easy access to environment variables
 
     :env      {:mb-run-mode "dev"}
     :jvm-opts ["-Dlogfile.path=target/log"]}
