@@ -1,3 +1,17 @@
+# Custom styles
+
+* located in `frontend/src/metabase/css`
+* For `Sales Dashboard v1.1` the styles are located in `frontend/src/metabase/css/sales_dashboard.css`
+* To build run `./bin/build` from root of project
+  * Must install Java 1.8
+* To deploy to `analytics.maderenovations.com` run `lein heroku deploy`
+  *  Must install [Leiningen](https://leiningen.org/)
+
+
+
+---
+
+
 # Metabase
 Metabase is the easy, open source way for everyone in your company to ask questions and learn from data.
 
