@@ -7,7 +7,7 @@
 * To deploy to `analytics.maderenovations.com` run `lein heroku deploy`
   *  Must install [Leiningen](https://leiningen.org/)
 
-
+### NOTE: when modifying dashboard styles make sure to scope to both the dashboard in question for sales dashboard v1.1 this is `.pb4` and only when `.DashboardGrid:not(.Dash--editing)`
 
 ---
 
