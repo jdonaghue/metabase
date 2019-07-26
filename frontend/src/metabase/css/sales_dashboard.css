@@ -1,9 +1,20 @@
+.pb4.Dashboard--fullscreen {
+  padding: 1rem !important;
+  height: 100vh !important;
+  width: 100vw !important;
+}
+
 .pb4 .DashboardGrid:not(.Dash--editing) {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: 70px 200px 75px 125px 125px;
+  grid-template-rows: 75px 2fr .75fr 1fr 1fr;
   grid-column-gap: 10px;
   grid-row-gap: 10px;
+  height: calc(100vh - 260px) !important;
+}
+
+.pb4.Dashboard--fullscreen .DashboardGrid {
+  height: calc(100vh - 160px) !important;
 }
 
 .pb4 .DashboardGrid:not(.Dash--editing) .DashCard {
@@ -51,4 +62,12 @@
 
 .pb4 .DashboardGrid:not(.Dash--editing) .DashCard:nth-child(n+7):nth-child(-n+12) .ScalarValue {
   font-size: 6em !important;
+}
+
+.pb4 .DashboardGrid:not(.Dash--editing) .DashCard .Scalar-title div {
+  white-space: pre-line !important;
+  font-size: .85rem;
+  text-align: center;
+  text-overflow: unset !important;
+  overflow: visible !important;
 }
