@@ -11,12 +11,12 @@ import Tooltip from "metabase/components/Tooltip";
 
 import { Flex } from "grid-styled";
 
-export const ScalarWrapper = ({ children }) => (
+export const ScalarWrapper = ({ className, children }) => (
   <Flex
     align="center"
     justify="center"
     flexDirection="column"
-    className="full-height full flex-wrap relative"
+    className={`full-height full flex-wrap relative ${className}`}
     flex={1}
   >
     {children}

@@ -11,6 +11,7 @@
   grid-column-gap: 10px;
   grid-row-gap: 10px;
   height: calc(100vh - 260px) !important;
+  margin: 0 !important;
 }
 
 .pb4.Dashboard--fullscreen .DashboardGrid {
@@ -38,30 +39,103 @@
   font-size: 2rem;
 }
 
-.pb4 .DashboardGrid:not(.Dash--editing) .DashCard:nth-child(n+7):nth-child(-n+12) text {
+.pb4 .DashboardGrid:not(.Dash--editing) .DashCard:nth-child(n+12):nth-child(-n+19) text {
   font-size: 2em !important;
 }
 
-.pb4 .DashboardGrid:not(.Dash--editing) .DashCard:nth-child(-n+18) {
+.pb4 .DashboardGrid:not(.Dash--editing) .DashCard:nth-child(-n+23) {
   grid-column: span 2;
 }
 
-.pb4 .DashboardGrid:not(.Dash--editing) .DashCard:nth-child(32) {
+.pb4 .DashboardGrid:not(.Dash--editing) .DashCard:nth-child(13) {
+  left: 1px !important;
+}
+
+.pb4 .DashboardGrid:not(.Dash--editing) .DashCard:nth-child(14) {
+  left: calc(((100vw - 6em) / 6) * 1 + 2px)  !important;
+}
+
+.pb4 .DashboardGrid:not(.Dash--editing) .DashCard:nth-child(15) {
+  left: calc(((100vw - 6em) / 6) * 2 + 5px)  !important;
+}
+
+.pb4 .DashboardGrid:not(.Dash--editing) .DashCard:nth-child(16) {
+  left: calc(((100vw - 6em) / 6) * 3 + 9px)  !important;
+}
+
+.pb4 .DashboardGrid:not(.Dash--editing) .DashCard:nth-child(17) {
+  left: calc(((100vw - 6em) / 6) * 5 +
+   15px)  !important;
+}
+
+.pb4.Dashboard--fullscreen .DashboardGrid:not(.Dash--editing) .DashCard:nth-child(14) {
+  left: calc(((100vw - 6em) / 6) * 1 - 3px)  !important;
+}
+
+.pb4.Dashboard--fullscreen .DashboardGrid:not(.Dash--editing) .DashCard:nth-child(15) {
+  left: calc(((100vw - 6em) / 6) * 2 - 6px)  !important;
+}
+
+.pb4.Dashboard--fullscreen .DashboardGrid:not(.Dash--editing) .DashCard:nth-child(16) {
+  left: calc(((100vw - 6em) / 6) * 3 - 9px)  !important;
+}
+
+.pb4.Dashboard--fullscreen .DashboardGrid:not(.Dash--editing) .DashCard:nth-child(17) {
+  left: calc(((100vw - 6em) / 6) * 5 - 15px)  !important;
+}
+
+.pb4 .DashboardGrid:not(.Dash--editing) .DashCard:nth-child(26) {
+  grid-column: span 4;
+  margin-right: 24vw
+}
+
+.pb4 .DashboardGrid:not(.Dash--editing) .DashCard:nth-child(34) {
   grid-column: span 5;
-  margin-right: 32vw;
+  margin-right: 32vw
 }
 
-.pb4 .DashboardGrid:not(.Dash--editing) .DashCard:nth-child(33) {
+.pb4 .DashboardGrid:not(.Dash--editing) .DashCard:nth-child(35) {
   grid-column: span 2;
-  margin-right: 8vw;
+  margin-right: 8vw
+}
+
+.pb4 .DashboardGrid:not(.Dash--editing) .DashCard:nth-child(36) {
+  grid-column: span 2;
+  margin-right: 8vw
 }
 
 .pb4 .DashboardGrid:not(.Dash--editing) .DashCard:nth-child(-n+6) h1 {
   font-size: 18px !important;
 }
 
+.pb4 .DashboardGrid:not(.Dash--editing) .DashCard:nth-child(n+13):nth-child(-n+17) {
+  position: absolute !important;
+  top: calc((75px + ((100vh - 260px - 75px) * .25)) + 3.4em) !important;
+  z-index: 2 !important;
+  width: calc((100vw - 6em) / 6 - 20px)  !important;
+  text-align: center;
+}
+
+.pb4.Dashboard--fullscreen .DashboardGrid .DashCard:nth-child(n+13):nth-child(-n+17) {
+  top: calc((75px + ((100vh - 160px - 75px) * .25)) + 3.4em) !important;
+}
+
+.pb4 .DashboardGrid:not(.Dash--editing) .DashCard:nth-child(n+13):nth-child(-n+17) .Card {
+  box-shadow: none !important;
+  border: none !important;
+}
+
+.pb4 .DashboardGrid:not(.Dash--editing) .DashCard:nth-child(n+13):nth-child(-n+17) .ScalarValue {
+  font-size: 1.5em !important;
+}
+
 .pb4 .DashboardGrid:not(.Dash--editing) .DashCard:nth-child(n+7):nth-child(-n+12) .ScalarValue {
   font-size: 6em !important;
+  color: rgb(23, 190, 23) !important;
+}
+
+.pb4 .DashboardGrid:not(.Dash--editing) .DashCard:nth-child(n+7):nth-child(-n+12) .negative .ScalarValue {
+  color: red !important;
 }
 
 .pb4 .DashboardGrid:not(.Dash--editing) .DashCard .Scalar-title div {
@@ -70,4 +144,464 @@
   text-align: center;
   text-overflow: unset !important;
   overflow: visible !important;
+}
+
+@media only screen and (max-width: 1024px) {
+  .pb4 .DashboardGrid:not(.Dash--editing) {
+    display: block;
+    height: 100vh !important;
+    margin: 0 !important;
+  }
+
+  .pb4.Dashboard--fullscreen .DashboardGrid {
+    height: 100vh !important;
+  }
+
+  .pb4 .DashboardGrid:not(.Dash--editing) .DashCard {
+    position: absolute !important;
+    right: 8px !important;
+    left: 8px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .pb4 fieldset {
+    padding: 3px !important;
+    margin: 3px !important;
+  }
+
+  .pb4 fieldset:nth-child(1) {
+    margin-left: 11px !important;
+  }
+
+  /* leads */
+  .pb4 .DashboardGrid:not(.Dash--editing) .DashCard:nth-child(1) {
+    top: 225px !important;
+    height: 100px !important;
+  }
+
+  .pb4 .DashboardGrid:not(.Dash--editing) .DashCard:nth-child(7) {
+    top: 305px !important;
+    height: 400px !important;
+  }
+
+  .pb4 .DashboardGrid:not(.Dash--editing) .DashCard:nth-child(13):nth-child(13) {
+    top: 605px !important;
+    height: 50px !important;
+    width: 100px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .pb4 .DashboardGrid:not(.Dash--editing) .DashCard:nth-child(18):nth-child(18) {
+    top: 710px !important;
+    height: 100px !important;
+  }
+
+  .pb4 .DashboardGrid:not(.Dash--editing) .DashCard:nth-child(24):nth-child(24) {
+    top: 815px !important;
+    height: 100px !important;
+  }
+
+  .pb4 .DashboardGrid:not(.Dash--editing) .DashCard:nth-child(25):nth-child(25) {
+    top: 920px !important;
+    height: 100px !important;
+  }
+
+  .pb4 .DashboardGrid:not(.Dash--editing) .DashCard:nth-child(34):nth-child(34) {
+    top: 1025px !important;
+    height: 100px !important;
+  }
+
+  /* calls */
+
+  .pb4 .DashboardGrid:not(.Dash--editing) .DashCard:nth-child(2) {
+    top: 1130px !important;
+    height: 100px !important;
+  }
+
+  .pb4 .DashboardGrid:not(.Dash--editing) .DashCard:nth-child(8) {
+    top: 1235px !important;
+    height: 400px !important;
+  }
+
+  .pb4 .DashboardGrid:not(.Dash--editing) .DashCard:nth-child(14):nth-child(14) {
+    top: 1560px !important;
+    width: 100px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    height: 50px !important;
+    left: 0 !important;
+  }
+
+  .pb4 .DashboardGrid:not(.Dash--editing) .DashCard:nth-child(19):nth-child(19) {
+    top: 1640px !important;
+    height: 100px !important;
+  }
+
+  .pb4 .DashboardGrid:not(.Dash--editing) .DashCard:nth-child(33):nth-child(33) {
+    top: 1745px !important;
+    height: 100px !important;
+  }
+
+  /* site visits */
+
+  .pb4 .DashboardGrid:not(.Dash--editing) .DashCard:nth-child(3) {
+    top: 1850px !important;
+    height: 100px !important;
+  }
+
+  .pb4 .DashboardGrid:not(.Dash--editing) .DashCard:nth-child(9) {
+    top: 1955px !important;
+    height: 400px !important;
+  }
+
+  .pb4 .DashboardGrid:not(.Dash--editing) .DashCard:nth-child(15):nth-child(15) {
+    top: 2275px !important;
+    width: 100px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    height: 50px !important;
+    left: 0 !important;
+  }
+
+  .pb4 .DashboardGrid:not(.Dash--editing) .DashCard:nth-child(20):nth-child(20) {
+    top: 2360px !important;
+    height: 100px !important;
+  }
+
+  .pb4 .DashboardGrid:not(.Dash--editing) .DashCard:nth-child(26):nth-child(26) {
+    top: 2465px !important;
+    height: 100px !important;
+  }
+
+  /* proposals */
+
+  .pb4 .DashboardGrid:not(.Dash--editing) .DashCard:nth-child(4) {
+    top: 2570px !important;
+    height: 100px !important;
+  }
+
+  .pb4 .DashboardGrid:not(.Dash--editing) .DashCard:nth-child(10) {
+    top: 2675px !important;
+    height: 400px !important;
+  }
+
+  .pb4 .DashboardGrid:not(.Dash--editing) .DashCard:nth-child(16):nth-child(16) {
+    top: 2985px !important;
+    width: 100px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    height: 50px !important;
+    left: 0 !important;
+  }
+
+  .pb4 .DashboardGrid:not(.Dash--editing) .DashCard:nth-child(21):nth-child(21) {
+    top: 3080px !important;
+    height: 100px !important;
+  }
+
+  .pb4 .DashboardGrid:not(.Dash--editing) .DashCard:nth-child(27):nth-child(27) {
+    top: 3185px !important;
+    height: 100px !important;
+  }
+
+  .pb4 .DashboardGrid:not(.Dash--editing) .DashCard:nth-child(28):nth-child(28) {
+    top: 3290px !important;
+    height: 100px !important;
+  }
+
+  .pb4 .DashboardGrid:not(.Dash--editing) .DashCard:nth-child(35):nth-child(35) {
+    top: 3395px !important;
+    height: 100px !important;
+  }
+
+  /* proposals sent */
+
+  .pb4 .DashboardGrid:not(.Dash--editing) .DashCard:nth-child(5) {
+    top: 3500px !important;
+    height: 100px !important;
+  }
+
+  .pb4 .DashboardGrid:not(.Dash--editing) .DashCard:nth-child(11) {
+    top: 3605px !important;
+    height: 400px !important;
+  }
+
+  .pb4 .DashboardGrid:not(.Dash--editing) .DashCard:nth-child(22):nth-child(22) {
+    top: 4010px !important;
+    height: 100px !important;
+  }
+
+  .pb4 .DashboardGrid:not(.Dash--editing) .DashCard:nth-child(29):nth-child(29) {
+    top: 4115px !important;
+    height: 100px !important;
+  }
+
+  .pb4 .DashboardGrid:not(.Dash--editing) .DashCard:nth-child(30):nth-child(30) {
+    top: 4220px !important;
+    height: 100px !important;
+  }
+
+  .pb4 .DashboardGrid:not(.Dash--editing) .DashCard:nth-child(36):nth-child(36) {
+    top: 4325px !important;
+    height: 100px !important;
+  }
+
+  /* signed */
+
+  .pb4 .DashboardGrid:not(.Dash--editing) .DashCard:nth-child(6) {
+    top: 4430px !important;
+    height: 100px !important;
+  }
+
+  .pb4 .DashboardGrid:not(.Dash--editing) .DashCard:nth-child(12) {
+    top: 4535px !important;
+    height: 400px !important;
+  }
+
+  .pb4 .DashboardGrid:not(.Dash--editing) .DashCard:nth-child(17):nth-child(17) {
+    top: 4820px !important;
+    width: 100px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    height: 50px !important;
+    left: 0 !important;
+  }
+
+  .pb4 .DashboardGrid:not(.Dash--editing) .DashCard:nth-child(23):nth-child(23) {
+    top: 4940px !important;
+    height: 100px !important;
+  }
+
+  .pb4 .DashboardGrid:not(.Dash--editing) .DashCard:nth-child(31):nth-child(31) {
+    top: 5045px !important;
+    height: 100px !important;
+  }
+
+  .pb4 .DashboardGrid:not(.Dash--editing) .DashCard:nth-child(32):nth-child(32) {
+    top: 5150px !important;
+    height: 100px !important;
+  }
+
+  .pb4 .DashboardGrid:not(.Dash--editing) .DashCard:nth-child(37):nth-child(37) {
+    top: 5255px !important;
+    height: 100px !important;
+  }
+
+  /* leads */
+
+  .pb4.Dashboard--fullscreen .DashboardGrid:not(.Dash--editing) .DashCard:nth-child(1) {
+    top: 100px !important;
+    height: 100px !important;
+  }
+
+  .pb4.Dashboard--fullscreen .DashboardGrid:not(.Dash--editing) .DashCard:nth-child(7) {
+    top: 200px !important;
+    height: 400px !important;
+  }
+
+  .pb4.Dashboard--fullscreen .DashboardGrid:not(.Dash--editing) .DashCard:nth-child(13):nth-child(13) {
+    top: 475px !important;
+    height: 50px !important;
+    width: 100px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .pb4.Dashboard--fullscreen .DashboardGrid:not(.Dash--editing) .DashCard:nth-child(18):nth-child(18) {
+    top: 605px !important;
+    height: 100px !important;
+  }
+
+  .pb4.Dashboard--fullscreen .DashboardGrid:not(.Dash--editing) .DashCard:nth-child(24):nth-child(24) {
+    top: 710px !important;
+    height: 100px !important;
+  }
+
+  .pb4.Dashboard--fullscreen .DashboardGrid:not(.Dash--editing) .DashCard:nth-child(25):nth-child(25) {
+    top: 815px !important;
+    height: 100px !important;
+  }
+
+  .pb4.Dashboard--fullscreen .DashboardGrid:not(.Dash--editing) .DashCard:nth-child(34):nth-child(34) {
+    top: 920px !important;
+    height: 100px !important;
+  }
+
+  /* calls */
+
+  .pb4.Dashboard--fullscreen .DashboardGrid:not(.Dash--editing) .DashCard:nth-child(2) {
+    top: 1025px !important;
+    height: 100px !important;
+  }
+
+  .pb4.Dashboard--fullscreen .DashboardGrid:not(.Dash--editing) .DashCard:nth-child(8) {
+    top: 1130px !important;
+    height: 400px !important;
+  }
+
+  .pb4.Dashboard--fullscreen .DashboardGrid:not(.Dash--editing) .DashCard:nth-child(14):nth-child(14) {
+    top: 1440px !important;
+    width: 100px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    height: 50px !important;
+    left: 0 !important;
+  }
+
+  .pb4.Dashboard--fullscreen .DashboardGrid:not(.Dash--editing) .DashCard:nth-child(19):nth-child(19) {
+    top: 1535px !important;
+    height: 100px !important;
+  }
+
+  .pb4.Dashboard--fullscreen .DashboardGrid:not(.Dash--editing) .DashCard:nth-child(33):nth-child(33) {
+    top: 1640px !important;
+    height: 100px !important;
+  }
+
+  /* site visits */
+
+  .pb4.Dashboard--fullscreen .DashboardGrid:not(.Dash--editing) .DashCard:nth-child(3) {
+    top: 1745px !important;
+    height: 100px !important;
+  }
+
+  .pb4.Dashboard--fullscreen .DashboardGrid:not(.Dash--editing) .DashCard:nth-child(9) {
+    top: 1850px !important;
+    height: 400px !important;
+  }
+
+  .pb4.Dashboard--fullscreen .DashboardGrid:not(.Dash--editing) .DashCard:nth-child(15):nth-child(15) {
+    top: 2120px !important;
+    width: 100px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    height: 50px !important;
+    left: 0 !important;
+  }
+
+  .pb4.Dashboard--fullscreen .DashboardGrid:not(.Dash--editing) .DashCard:nth-child(20):nth-child(20) {
+    top: 2255px !important;
+    height: 100px !important;
+  }
+
+  .pb4.Dashboard--fullscreen .DashboardGrid:not(.Dash--editing) .DashCard:nth-child(26):nth-child(26) {
+    top: 2360px !important;
+    height: 100px !important;
+  }
+
+  /* proposals */
+
+  .pb4.Dashboard--fullscreen .DashboardGrid:not(.Dash--editing) .DashCard:nth-child(4) {
+    top: 2465px !important;
+    height: 100px !important;
+  }
+
+  .pb4.Dashboard--fullscreen .DashboardGrid:not(.Dash--editing) .DashCard:nth-child(10) {
+    top: 2570px !important;
+    height: 400px !important;
+  }
+
+  .pb4.Dashboard--fullscreen .DashboardGrid:not(.Dash--editing) .DashCard:nth-child(16):nth-child(16) {
+    top: 2855px !important;
+    width: 100px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    height: 50px !important;
+    left: 0 !important;
+  }
+
+  .pb4.Dashboard--fullscreen .DashboardGrid:not(.Dash--editing) .DashCard:nth-child(21):nth-child(21) {
+    top: 2975px !important;
+    height: 100px !important;
+  }
+
+  .pb4.Dashboard--fullscreen .DashboardGrid:not(.Dash--editing) .DashCard:nth-child(27):nth-child(27) {
+    top: 3080px !important;
+    height: 100px !important;
+  }
+
+  .pb4.Dashboard--fullscreen .DashboardGrid:not(.Dash--editing) .DashCard:nth-child(28):nth-child(28) {
+    top: 3185px !important;
+    height: 100px !important;
+  }
+
+  .pb4.Dashboard--fullscreen .DashboardGrid:not(.Dash--editing) .DashCard:nth-child(35):nth-child(35) {
+    top: 3290px !important;
+    height: 100px !important;
+  }
+
+  /* proposals sent */
+
+  .pb4.Dashboard--fullscreen .DashboardGrid:not(.Dash--editing) .DashCard:nth-child(5) {
+    top: 3395px !important;
+    height: 100px !important;
+  }
+
+  .pb4.Dashboard--fullscreen .DashboardGrid:not(.Dash--editing) .DashCard:nth-child(11) {
+    top: 3500px !important;
+    height: 400px !important;
+  }
+
+  .pb4.Dashboard--fullscreen .DashboardGrid:not(.Dash--editing) .DashCard:nth-child(22):nth-child(22) {
+    top: 3905px !important;
+    height: 100px !important;
+  }
+
+  .pb4.Dashboard--fullscreen .DashboardGrid:not(.Dash--editing) .DashCard:nth-child(29):nth-child(29) {
+    top: 4010px !important;
+    height: 100px !important;
+  }
+
+  .pb4.Dashboard--fullscreen .DashboardGrid:not(.Dash--editing) .DashCard:nth-child(30):nth-child(30) {
+    top: 4115px !important;
+    height: 100px !important;
+  }
+
+  .pb4.Dashboard--fullscreen .DashboardGrid:not(.Dash--editing) .DashCard:nth-child(36):nth-child(36) {
+    top: 4220px !important;
+    height: 100px !important;
+  }
+
+  /* signed */
+
+  .pb4.Dashboard--fullscreen .DashboardGrid:not(.Dash--editing) .DashCard:nth-child(6) {
+    top: 4325px !important;
+    height: 100px !important;
+  }
+
+  .pb4.Dashboard--fullscreen .DashboardGrid:not(.Dash--editing) .DashCard:nth-child(12) {
+    top: 4430px !important;
+    height: 400px !important;
+  }
+
+  .pb4.Dashboard--fullscreen .DashboardGrid:not(.Dash--editing) .DashCard:nth-child(17):nth-child(17) {
+    top: 4715px !important;
+    width: 100px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    height: 50px !important;
+    left: 0 !important;
+  }
+
+  .pb4.Dashboard--fullscreen .DashboardGrid:not(.Dash--editing) .DashCard:nth-child(23):nth-child(23) {
+    top: 4835px !important;
+    height: 100px !important;
+  }
+
+  .pb4.Dashboard--fullscreen .DashboardGrid:not(.Dash--editing) .DashCard:nth-child(31):nth-child(31) {
+    top: 4940px !important;
+    height: 100px !important;
+  }
+
+  .pb4.Dashboard--fullscreen .DashboardGrid:not(.Dash--editing) .DashCard:nth-child(32):nth-child(32) {
+    top: 5045px !important;
+    height: 100px !important;
+  }
+
+  .pb4.Dashboard--fullscreen .DashboardGrid:not(.Dash--editing) .DashCard:nth-child(37):nth-child(37) {
+    top: 5150px !important;
+    height: 100px !important;
+  }
 }

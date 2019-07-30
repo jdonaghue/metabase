@@ -181,6 +181,7 @@ export default class Scalar extends Component {
 
     const columnIndex = this._getColumnIndex(cols, settings);
     const value = rows[0] && rows[0][columnIndex];
+    const compare = rows[0] && rows[0][columnIndex + 1];
     const column = cols[columnIndex];
 
     const formatOptions = {
@@ -198,7 +199,9 @@ export default class Scalar extends Component {
     const isClickable = visualizationIsClickable(clicked);
 
     return (
-      <ScalarWrapper>
+      <ScalarWrapper
+        className={compare != null && value < compare ? 'negative' : ''}
+      >
         <div className="Card-title absolute top right p1 px2">
           {actionButtons}
         </div>
